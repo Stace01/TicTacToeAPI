@@ -1589,3 +1589,32 @@ WHERE "p"."PlayerId" = @__request_PlayerId_0
 2023-03-16 09:36:11.590 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
 2023-03-16 09:36:11.591 +00:00 [INF] HTTP GET /api/v1/players responded 200 in 914.0671 ms
 2023-03-16 09:36:11.605 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 200 - application/json;+charset=utf-8;+x-api-version=1 929.1850ms
+2023-03-16 09:37:38.315 +00:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:37:38.433 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-16 09:37:38.434 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-16 09:37:38.463 +00:00 [INF] Creating key {ac32b9e4-42b0-4ce6-8b07-fd56ea4fadc0} with creation date 2023-03-16 09:37:38Z, activation date 2023-03-16 09:37:38Z, and expiration date 2023-06-14 09:37:38Z.
+2023-03-16 09:37:38.480 +00:00 [WRN] No XML encryptor configured. Key {ac32b9e4-42b0-4ce6-8b07-fd56ea4fadc0} may be persisted to storage in unencrypted form.
+2023-03-16 09:37:38.484 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-ac32b9e4-42b0-4ce6-8b07-fd56ea4fadc0.xml'.
+2023-03-16 09:37:38.721 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:37:38.989 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:37:38.989 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:37:38.994 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:37:38.996 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:37:38.997 +00:00 [INF] Content root path: /app
+2023-03-16 09:38:04.558 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32772/swagger - -
+2023-03-16 09:38:04.663 +00:00 [INF] HTTP GET /swagger responded 404 in 28.8972 ms
+2023-03-16 09:38:04.681 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32772/swagger - - - 404 0 - 136.1948ms
+2023-03-16 09:38:13.294 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32772/api/v1/players - -
+2023-03-16 09:38:13.306 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:38:13.326 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:38:13.452 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:38:14.034 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Players" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:38:14.067 +00:00 [INF] Executing OkObjectResult, writing value of type 'TicTacToeAPI.Core.Queries.GetList.PlayerlistVm'.
+2023-03-16 09:38:14.205 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 872.7277ms
+2023-03-16 09:38:14.207 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:38:14.207 +00:00 [INF] HTTP GET /api/v1/players responded 200 in 912.7850 ms
+2023-03-16 09:38:14.222 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32772/api/v1/players - - - 200 - application/json;+charset=utf-8;+x-api-version=1 927.8647ms
