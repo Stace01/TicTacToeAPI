@@ -77,3 +77,19 @@ PUT api/v1/players
 
 Удаляем игрока.
 DELETE api/v1/players
+
+Использование
+Пример использования этого API:
+
+Пример запроса:
+https://localhost:32772/api/v1/players
+
+Пример ответа:
+{
+    "players": []
+}
+
+
+Запуск в контейнере:
+~ make docker-up или sudo docker-compose up
+посмотреть все доступные команды: make или make help
