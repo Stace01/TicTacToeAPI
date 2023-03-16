@@ -14,6 +14,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.AspNetCore.Mvc.Versioning;
 
 namespace TicTacToeAPI.Presentation
 {
@@ -37,6 +38,9 @@ namespace TicTacToeAPI.Presentation
 
             public void ConfigureServices(IServiceCollection services)
             {
+                services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=TicTacToeAPI.Players.db"));
+                services.AddControllersWithViews();
+
                 services.AddAutoMapper(config =>
                 {
                     config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
@@ -57,12 +61,23 @@ namespace TicTacToeAPI.Presentation
                     });
                 });
 
-                services.AddVersionedApiExplorer(options =>
-                options.GroupNameFormat = "'v'VVV");
+                services.AddVersionedApiExplorer(setup =>
+                {
+                    setup.GroupNameFormat = "'v'VVV";
+                    setup.SubstituteApiVersionInUrl = true;
+                });
                 services.AddTransient<IConfigureOptions<SwaggerGenOptions>,
                         ConfigureSwaggerOptions>();
                 services.AddSwaggerGen();
-                services.AddApiVersioning();
+                services.AddApiVersioning(opt =>
+                {
+                    opt.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+                    opt.AssumeDefaultVersionWhenUnspecified = true;
+                    opt.ReportApiVersions = true;
+                    opt.ApiVersionReader = ApiVersionReader.Combine(new UrlSegmentApiVersionReader(),
+                                                                    new HeaderApiVersionReader("x-api-version"),
+                                                                    new MediaTypeApiVersionReader("x-api-version"));
+                });
                 services.AddHttpContextAccessor();
             }
 

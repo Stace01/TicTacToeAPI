@@ -1,0 +1,1591 @@
+2023-03-16 08:31:01.202 +00:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 08:31:01.384 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 08:31:01.385 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 08:31:01.648 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 08:31:01.962 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 08:31:01.962 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 08:31:01.968 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 08:31:01.969 +00:00 [INF] Hosting environment: Development
+2023-03-16 08:31:01.970 +00:00 [INF] Content root path: /app
+2023-03-16 08:31:27.922 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 08:31:28.014 +00:00 [INF] HTTP GET /swagger responded 404 in 29.3588 ms
+2023-03-16 08:31:28.032 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 115.5270ms
+2023-03-16 08:31:38.756 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 08:31:38.781 +00:00 [INF] Request did not specify a service API version, but multiple candidate actions were found. Candidate actions: TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)
+2023-03-16 08:31:38.787 +00:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2023-03-16 08:31:38.800 +00:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2023-03-16 08:31:38.927 +00:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2023-03-16 08:31:38.927 +00:00 [INF] HTTP GET /api/v1/players responded 400 in 170.0713 ms
+2023-03-16 08:31:38.928 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 400 - application/json;+charset=utf-8 171.4854ms
+2023-03-16 08:37:09.656 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 08:37:09.833 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 08:37:09.834 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 08:37:10.041 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 08:37:10.317 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 08:37:10.318 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 08:37:10.325 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 08:37:10.326 +00:00 [INF] Hosting environment: Development
+2023-03-16 08:37:10.326 +00:00 [INF] Content root path: /app
+2023-03-16 08:37:36.360 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 08:37:36.463 +00:00 [INF] HTTP GET /swagger responded 404 in 33.5222 ms
+2023-03-16 08:37:36.483 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 131.2151ms
+2023-03-16 08:37:40.297 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 08:37:40.304 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:37:40.362 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 08:37:40.457 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 88.8985ms
+2023-03-16 08:37:40.503 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:37:40.539 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 241.0276 ms
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 08:37:40.636 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 08:37:40.654 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8 356.9295ms
+2023-03-16 08:38:47.553 +00:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 08:38:47.800 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 08:38:47.801 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 08:38:48.014 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 08:38:48.284 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 08:38:48.284 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 08:38:48.291 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 08:38:48.292 +00:00 [INF] Hosting environment: Development
+2023-03-16 08:38:48.292 +00:00 [INF] Content root path: /app
+2023-03-16 08:39:13.982 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 08:39:14.086 +00:00 [INF] HTTP GET /swagger responded 404 in 30.9422 ms
+2023-03-16 08:39:14.105 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 130.3071ms
+2023-03-16 08:39:18.185 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 08:39:18.207 +00:00 [INF] Request did not specify a service API version, but multiple candidate actions were found. Candidate actions: TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)
+2023-03-16 08:39:18.213 +00:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2023-03-16 08:39:18.225 +00:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2023-03-16 08:39:18.343 +00:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2023-03-16 08:39:18.343 +00:00 [INF] HTTP GET /api/v1/players responded 400 in 157.6927 ms
+2023-03-16 08:39:18.344 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 400 - application/json;+charset=utf-8 159.2826ms
+2023-03-16 08:40:20.510 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 08:40:20.694 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 08:40:20.695 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 08:40:20.913 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 08:40:21.176 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 08:40:21.177 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 08:40:21.183 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 08:40:21.184 +00:00 [INF] Hosting environment: Development
+2023-03-16 08:40:21.185 +00:00 [INF] Content root path: /app
+2023-03-16 08:40:48.860 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 08:40:48.959 +00:00 [INF] HTTP GET /swagger responded 404 in 25.8533 ms
+2023-03-16 08:40:48.977 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 124.3180ms
+2023-03-16 08:40:53.138 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 08:40:53.161 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:40:53.197 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 08:40:53.288 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 84.8651ms
+2023-03-16 08:40:53.333 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:40:53.364 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 225.0549 ms
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 08:40:53.458 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 08:40:53.469 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8 330.9646ms
+2023-03-16 08:41:44.066 +00:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 08:41:44.250 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 08:41:44.250 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 08:41:44.466 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 08:41:44.727 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 08:41:44.727 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 08:41:44.733 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 08:41:44.734 +00:00 [INF] Hosting environment: Development
+2023-03-16 08:41:44.735 +00:00 [INF] Content root path: /app
+2023-03-16 08:42:10.521 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 08:42:10.627 +00:00 [INF] HTTP GET /swagger responded 404 in 28.1983 ms
+2023-03-16 08:42:10.646 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 130.4514ms
+2023-03-16 08:42:13.235 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 08:42:13.259 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:42:13.297 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 08:42:13.390 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 87.983ms
+2023-03-16 08:42:13.434 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:42:13.466 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 230.0113 ms
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 08:42:13.562 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 08:42:13.576 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8 341.8214ms
+2023-03-16 08:48:49.991 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 08:48:50.197 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 08:48:50.198 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 08:48:50.414 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 08:48:50.681 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 08:48:50.681 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 08:48:50.688 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 08:48:50.689 +00:00 [INF] Hosting environment: Development
+2023-03-16 08:48:50.689 +00:00 [INF] Content root path: /app
+2023-03-16 08:49:16.745 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 08:49:16.843 +00:00 [INF] HTTP GET /swagger responded 404 in 27.5833 ms
+2023-03-16 08:49:16.865 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 124.2300ms
+2023-03-16 08:49:20.273 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 08:49:20.291 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:49:20.328 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 08:49:20.419 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 84.103ms
+2023-03-16 08:49:20.464 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:49:20.495 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 221.4369 ms
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 08:49:20.588 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 08:49:20.605 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8 331.9543ms
+2023-03-16 08:49:59.150 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 08:49:59.336 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 08:49:59.337 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 08:49:59.580 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 08:49:59.842 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 08:49:59.843 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 08:49:59.849 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 08:49:59.850 +00:00 [INF] Hosting environment: Development
+2023-03-16 08:49:59.851 +00:00 [INF] Content root path: /app
+2023-03-16 08:50:25.931 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 08:50:26.035 +00:00 [INF] HTTP GET /swagger responded 404 in 31.4768 ms
+2023-03-16 08:50:26.053 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 126.6113ms
+2023-03-16 08:50:29.553 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 08:50:29.567 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:50:29.606 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 08:50:29.700 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 88.0449ms
+2023-03-16 08:50:29.743 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:50:29.772 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 218.2273 ms
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 08:50:29.862 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 08:50:29.880 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8 326.9248ms
+2023-03-16 08:51:20.750 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 08:51:20.935 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 08:51:20.936 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 08:51:21.176 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 08:51:21.470 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 08:51:21.470 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 08:51:21.477 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 08:51:21.478 +00:00 [INF] Hosting environment: Development
+2023-03-16 08:51:21.478 +00:00 [INF] Content root path: /app
+2023-03-16 08:51:47.234 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 08:51:47.347 +00:00 [INF] HTTP GET /swagger responded 404 in 45.4626 ms
+2023-03-16 08:51:47.365 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 140.9900ms
+2023-03-16 08:51:49.928 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 08:51:49.941 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:51:49.981 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 08:51:50.063 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 74.0965ms
+2023-03-16 08:51:50.102 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:51:50.129 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 200.0878 ms
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 08:51:50.208 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 08:51:50.226 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8 298.0119ms
+2023-03-16 08:54:24.522 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 08:54:24.723 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 08:54:24.724 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 08:54:24.956 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 08:54:25.217 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 08:54:25.217 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 08:54:25.224 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 08:54:25.225 +00:00 [INF] Hosting environment: Development
+2023-03-16 08:54:25.225 +00:00 [INF] Content root path: /app
+2023-03-16 08:54:51.422 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 08:54:51.514 +00:00 [INF] HTTP GET /swagger responded 404 in 36.2472 ms
+2023-03-16 08:54:51.533 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 116.8752ms
+2023-03-16 08:55:02.289 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 08:55:02.302 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:55:02.341 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 08:55:02.437 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 90.3084ms
+2023-03-16 08:55:02.485 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 08:55:02.518 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 228.0698 ms
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 08:55:02.619 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 08:55:02.640 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8 350.6363ms
+2023-03-16 09:00:01.889 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:00:02.071 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:00:02.075 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 09:00:02.350 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:00:02.613 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:00:02.614 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:00:02.621 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:00:02.622 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:00:02.622 +00:00 [INF] Content root path: /app
+2023-03-16 09:00:28.469 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:00:28.566 +00:00 [INF] HTTP GET /swagger responded 404 in 30.7377 ms
+2023-03-16 09:00:28.582 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 117.4876ms
+2023-03-16 09:00:32.104 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:00:32.117 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:00:32.153 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:00:32.234 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 74.7839ms
+2023-03-16 09:00:32.272 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:00:32.298 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 193.1432 ms
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 09:00:32.382 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'DrfLikePaginations.IPagination' while attempting to activate 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 09:00:32.399 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8 295.2315ms
+2023-03-16 09:01:10.509 +00:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:01:10.706 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Player" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Player" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:01:10.709 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Player_PlayerId" ON "Player" ("PlayerId");
+2023-03-16 09:01:10.965 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:01:11.223 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:01:11.223 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:01:11.229 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:01:11.230 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:01:11.230 +00:00 [INF] Content root path: /app
+2023-03-16 09:01:36.766 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:01:36.857 +00:00 [INF] HTTP GET /swagger responded 404 in 32.6178 ms
+2023-03-16 09:01:36.876 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 115.1291ms
+2023-03-16 09:01:39.399 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:01:39.413 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:01:39.440 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:01:39.574 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:01:40.251 +00:00 [ERR] Failed executing DbCommand (86ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Player" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:01:40.375 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TicTacToeAPI.Infrastructure.DataBase.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Player'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Player'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-03-16 09:01:40.700 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 1253.6998ms
+2023-03-16 09:01:40.746 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:01:40.776 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 1376.3088 ms
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Player'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 09:01:40.866 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Player'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 09:01:40.904 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8;+x-api-version=1 1504.7624ms
+2023-03-16 09:02:45.735 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:02:45.919 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Players" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Players" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:02:45.920 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Players_PlayerId" ON "Players" ("PlayerId");
+2023-03-16 09:02:46.154 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:02:46.408 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:02:46.409 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:02:46.415 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:02:46.416 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:02:46.416 +00:00 [INF] Content root path: /app
+2023-03-16 09:03:12.244 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:03:12.339 +00:00 [INF] HTTP GET /swagger responded 404 in 35.1112 ms
+2023-03-16 09:03:12.358 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 119.0477ms
+2023-03-16 09:03:15.780 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:03:15.793 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:03:15.820 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:03:15.956 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:03:16.596 +00:00 [ERR] Failed executing DbCommand (86ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Players" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:03:16.716 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TicTacToeAPI.Infrastructure.DataBase.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-03-16 09:03:17.016 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 1189.2399ms
+2023-03-16 09:03:17.061 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:03:17.092 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 1311.4567 ms
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 09:03:17.181 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 09:03:17.224 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8;+x-api-version=1 1444.5522ms
+2023-03-16 09:15:58.288 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:15:58.481 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Players" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Players" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:15:58.482 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Players_PlayerId" ON "Players" ("PlayerId");
+2023-03-16 09:15:58.728 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:15:59.011 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:15:59.011 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:15:59.017 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:15:59.018 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:15:59.019 +00:00 [INF] Content root path: /app
+2023-03-16 09:16:24.679 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:16:24.772 +00:00 [INF] HTTP GET /swagger responded 404 in 29.7384 ms
+2023-03-16 09:16:24.791 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 117.5744ms
+2023-03-16 09:16:26.859 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:16:26.871 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:16:26.897 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:16:27.041 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:16:27.747 +00:00 [ERR] Failed executing DbCommand (95ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Players" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:16:27.872 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TicTacToeAPI.Infrastructure.DataBase.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-03-16 09:16:28.181 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 1277.445ms
+2023-03-16 09:16:28.225 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:16:28.256 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 1396.3219 ms
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 09:16:28.343 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 09:16:28.381 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8;+x-api-version=1 1521.9577ms
+2023-03-16 09:18:57.518 +00:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:18:57.746 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Players" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Players" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:18:57.753 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Players_PlayerId" ON "Players" ("PlayerId");
+2023-03-16 09:18:57.993 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:18:58.250 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:18:58.250 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:18:58.256 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:18:58.257 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:18:58.258 +00:00 [INF] Content root path: /app
+2023-03-16 09:19:24.408 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:19:24.503 +00:00 [INF] HTTP GET /swagger responded 404 in 25.6241 ms
+2023-03-16 09:19:24.522 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 123.3584ms
+2023-03-16 09:19:27.161 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:19:27.174 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:19:27.201 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:19:27.351 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:19:28.111 +00:00 [ERR] Failed executing DbCommand (91ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Players" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:19:28.226 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TicTacToeAPI.Infrastructure.DataBase.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-03-16 09:19:28.525 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 1316.415ms
+2023-03-16 09:19:28.571 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:19:28.602 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 1440.5571 ms
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 09:19:28.696 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 09:19:28.735 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8;+x-api-version=1 1573.7853ms
+2023-03-16 09:24:56.562 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:24:56.776 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Players" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Players" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:24:56.784 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Players_PlayerId" ON "Players" ("PlayerId");
+2023-03-16 09:24:56.869 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-16 09:24:56.870 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-16 09:24:56.907 +00:00 [INF] Creating key {a29d25cd-51f3-4048-accc-9e395b602b5d} with creation date 2023-03-16 09:24:56Z, activation date 2023-03-16 09:24:56Z, and expiration date 2023-06-14 09:24:56Z.
+2023-03-16 09:24:56.932 +00:00 [WRN] No XML encryptor configured. Key {a29d25cd-51f3-4048-accc-9e395b602b5d} may be persisted to storage in unencrypted form.
+2023-03-16 09:24:56.939 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-a29d25cd-51f3-4048-accc-9e395b602b5d.xml'.
+2023-03-16 09:24:57.229 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:24:57.561 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:24:57.561 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:24:57.566 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:24:57.567 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:24:57.568 +00:00 [INF] Content root path: /app
+2023-03-16 09:25:23.074 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:25:23.167 +00:00 [INF] HTTP GET /swagger responded 404 in 28.8717 ms
+2023-03-16 09:25:23.184 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 117.9201ms
+2023-03-16 09:25:25.231 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:25:25.243 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:25:25.265 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:25:25.389 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:25:26.205 +00:00 [ERR] Failed executing DbCommand (85ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Players" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:25:26.309 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TicTacToeAPI.Infrastructure.DataBase.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-03-16 09:25:26.603 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 1331.9021ms
+2023-03-16 09:25:26.639 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:25:26.667 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 1435.4751 ms
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method8(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 09:25:26.747 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method8(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 09:25:26.795 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8;+x-api-version=1 1563.2018ms
+2023-03-16 09:27:24.694 +00:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:27:24.930 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Players" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Players" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:27:24.937 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Players_PlayerId" ON "Players" ("PlayerId");
+2023-03-16 09:27:25.005 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-16 09:27:25.006 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-16 09:27:25.287 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:27:25.521 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:27:25.521 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:27:25.526 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:27:25.527 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:27:25.527 +00:00 [INF] Content root path: /app
+2023-03-16 09:27:50.820 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:27:50.904 +00:00 [INF] HTTP GET /swagger responded 404 in 30.0752 ms
+2023-03-16 09:27:50.922 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 108.7967ms
+2023-03-16 09:27:53.985 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:27:53.998 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:27:54.019 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:27:54.145 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:27:54.846 +00:00 [ERR] Failed executing DbCommand (89ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Players" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:27:54.956 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TicTacToeAPI.Infrastructure.DataBase.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-03-16 09:27:55.247 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 1221.7238ms
+2023-03-16 09:27:55.286 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:27:55.313 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 1327.2738 ms
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method8(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 09:27:55.393 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method8(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 09:27:55.430 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8;+x-api-version=1 1445.5361ms
+2023-03-16 09:28:23.595 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:28:23.809 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Players" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Players" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:28:23.818 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Players_PlayerId" ON "Players" ("PlayerId");
+2023-03-16 09:28:23.893 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-16 09:28:23.894 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-16 09:28:24.181 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:28:24.422 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:28:24.422 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:28:24.427 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:28:24.428 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:28:24.429 +00:00 [INF] Content root path: /app
+2023-03-16 09:28:50.107 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:28:50.183 +00:00 [INF] HTTP GET /swagger responded 404 in 29.7538 ms
+2023-03-16 09:28:50.206 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 98.6711ms
+2023-03-16 09:28:57.534 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:28:57.549 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:28:57.575 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:28:57.723 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:28:58.357 +00:00 [ERR] Failed executing DbCommand (88ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Players" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:28:58.473 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TicTacToeAPI.Infrastructure.DataBase.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-03-16 09:28:58.812 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 1229.7094ms
+2023-03-16 09:28:58.864 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:28:58.897 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 1362.1331 ms
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method8(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 09:28:58.988 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method8(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 09:28:59.027 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8;+x-api-version=1 1492.8989ms
+2023-03-16 09:29:31.077 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-16 09:29:31.292 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Players" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Players" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:29:31.299 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Players_PlayerId" ON "Players" ("PlayerId");
+2023-03-16 09:29:31.363 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-16 09:29:31.364 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-16 09:29:31.633 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:29:31.864 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:29:31.864 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:29:31.868 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:29:31.869 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:29:31.869 +00:00 [INF] Content root path: /app
+2023-03-16 09:29:57.587 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:29:57.682 +00:00 [INF] HTTP GET /swagger responded 404 in 31.1122 ms
+2023-03-16 09:29:57.700 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 120.3718ms
+2023-03-16 09:29:59.576 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:29:59.590 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:29:59.613 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:29:59.749 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:30:00.396 +00:00 [ERR] Failed executing DbCommand (84ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Players" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:30:00.516 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TicTacToeAPI.Infrastructure.DataBase.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-03-16 09:30:00.806 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 1186.8487ms
+2023-03-16 09:30:00.845 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:30:00.871 +00:00 [ERR] HTTP GET /api/v1/players responded 500 in 1294.0900 ms
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method8(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-16 09:30:00.952 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Players'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TicTacToeAPI.Core.Queries.GetList.GetPlayerlistQueryHandler.Handle(GetPlayerlistQuery request, CancellationToken cancellationToken) in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Core\Queries\GetList\GetPlayerlistQueryHandler.cs:line 19
+   at TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers() in E:\Training\C#\Тестовое SENSE CAPITAL\TicTacToeAPI\TicTacToeAPI\Presentation\Controllers\V1\PlayersController.cs:line 44
+   at lambda_method8(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-16 09:30:00.989 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 500 - text/plain;+charset=utf-8;+x-api-version=1 1413.0742ms
+2023-03-16 09:35:43.089 +00:00 [INF] Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2023-03-16 09:35:43.333 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Players" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Players" PRIMARY KEY,
+    "PlayerId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-16 09:35:43.342 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Players_PlayerId" ON "Players" ("PlayerId");
+2023-03-16 09:35:43.485 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-16 09:35:43.486 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-16 09:35:43.845 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-16 09:35:44.116 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-16 09:35:44.117 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-16 09:35:44.121 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-16 09:35:44.122 +00:00 [INF] Hosting environment: Development
+2023-03-16 09:35:44.122 +00:00 [INF] Content root path: /app
+2023-03-16 09:36:09.174 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-16 09:36:09.268 +00:00 [INF] HTTP GET /swagger responded 404 in 36.7368 ms
+2023-03-16 09:36:09.285 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 116.9024ms
+2023-03-16 09:36:10.676 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/players - -
+2023-03-16 09:36:10.690 +00:00 [INF] Executing endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:36:10.711 +00:00 [INF] Route matched with {action = "GetAllPlayers", controller = "Players"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicTacToeAPI.Core.Queries.GetList.PlayerlistVm]] GetAllPlayers() on controller TicTacToeAPI.Presentation.Controllers.V1.PlayersController (TicTacToeAPI).
+2023-03-16 09:36:10.838 +00:00 [INF] Получение всех игроков...
+2023-03-16 09:36:11.412 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__request_PlayerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."PlayerId", "p"."Name" AS "PlayerName"
+FROM "Players" AS "p"
+WHERE "p"."PlayerId" = @__request_PlayerId_0
+2023-03-16 09:36:11.439 +00:00 [INF] Executing OkObjectResult, writing value of type 'TicTacToeAPI.Core.Queries.GetList.PlayerlistVm'.
+2023-03-16 09:36:11.589 +00:00 [INF] Executed action TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI) in 872.6667ms
+2023-03-16 09:36:11.590 +00:00 [INF] Executed endpoint 'TicTacToeAPI.Presentation.Controllers.V1.PlayersController.GetAllPlayers (TicTacToeAPI)'
+2023-03-16 09:36:11.591 +00:00 [INF] HTTP GET /api/v1/players responded 200 in 914.0671 ms
+2023-03-16 09:36:11.605 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/players - - - 200 - application/json;+charset=utf-8;+x-api-version=1 929.1850ms

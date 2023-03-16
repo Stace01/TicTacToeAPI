@@ -5,8 +5,9 @@ using System.Security.Claims;
 
 namespace TicTacToeAPI.Presentation.Controllers.V1
 {
-    [Route("api/v1/[controller]")]
     [ApiController]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
     public class BaseController : ControllerBase
     {
         // Поле медиатора для использования его

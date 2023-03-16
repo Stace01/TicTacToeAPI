@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using DrfLikePaginations;
 using Microsoft.AspNetCore.Http.Extensions;
 using Serilog;
 using System;
@@ -13,18 +12,17 @@ using TicTacToeAPI.Core.Queries.GetDetails;
 
 namespace TicTacToeAPI.Presentation.Controllers.V1
 {
-    [Route("api/v1/[controller]")]
     [ApiController]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
     public class PlayersController : BaseController
     {
         private readonly AppDbContext _context;
-        private readonly IPagination _pagination;
         private readonly IMapper _mapper;
 
-        public PlayersController(AppDbContext context, IPagination pagination, IMapper mapper)
+        public PlayersController(AppDbContext context, IMapper mapper)
         {
             _context = context;
-            _pagination = pagination;
             _mapper = mapper;
         }
 
@@ -32,6 +30,7 @@ namespace TicTacToeAPI.Presentation.Controllers.V1
         /// Получаем данные всех игроков.
         /// </summary>
         /// <returns></returns>
+        [MapToApiVersion("1.0")]
         [HttpGet(Name = "GetPlayer")]
         public async Task<ActionResult<PlayerlistVm>> GetAllPlayers()
         {
@@ -51,6 +50,7 @@ namespace TicTacToeAPI.Presentation.Controllers.V1
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
+        [MapToApiVersion("1.0")]
         [HttpGet("{name}")]
         public async Task<ActionResult<PlayerDetailsVm>> GetPlayerData(string name)
         {

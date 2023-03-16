@@ -1,4 +1,6 @@
-﻿namespace TicTacToeAPI.Infrastructure.DataBase
+﻿using TicTacToeAPI.Presentation.Models;
+
+namespace TicTacToeAPI.Infrastructure.DataBase
 {
     /// <summary>
     /// Используется при старте приложения и проверяет,
@@ -9,7 +11,8 @@
     {
         public static void Initialize(AppDbContext dbContext)
         {
-            dbContext.Database.EnsureCreated();
+            dbContext.Database.EnsureCreatedAsync();
+            dbContext.SaveChanges();
         }
     }
 }
